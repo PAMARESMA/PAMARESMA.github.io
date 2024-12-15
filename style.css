@@ -186,14 +186,7 @@ section {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background: #333;
-    color: white;
-    margin-top: 20px;
-}
+
 /* Modal for Gallery */
 .modal {
     display: none;
@@ -691,11 +684,4 @@ body {
     .blog-card {
         margin: auto;
     }
-}
-@keyframes loadingSpinner {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-.spinner {
-    animation: loadingSpinner 1s linear infinite;
 }
