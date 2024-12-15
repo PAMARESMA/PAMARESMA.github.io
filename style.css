@@ -1,77 +1,12 @@
-/* General Styles */ 
-/* Global Styles */
+/* General Styles */
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Poppins', sans-serif;
-    width: 1024px; /* Paksa lebar website desktop */
-    overflow-x: scroll; /* Scroll horizontal di ponsel */
-    transform-origin: top left; /* Pusat transformasi */
-    transform: scale(1); /* Pastikan tidak ada perubahan skala */
-}
-
-header {
-    background-color: #d50000;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    padding: 0;
+    line-height: 1.6;
+    background: url(LOGOPMR.jpeg) no-repeat center center fixed;
+    background-size: cover;
 }
-
-nav ul li {
-    display: inline-block;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.section {
-    padding: 20px;
-    text-align: center;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(4, 250px); /* 4 kolom tetap */
-    gap: 20px;
-    justify-content: center;
-}
-
-.card {
-    background: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-img {
-    width: 250px; /* Paksa ukuran gambar tetap */
-    height: 150px;
-    object-fit: cover; /* Hindari distorsi gambar */
-}
-
-/* Nonaktifkan Media Queries */
-@media only screen and (max-width: 768px) {
-    /* Jangan ubah tata letak */
-}
-
 
 .container {
     width: 90%;
@@ -186,7 +121,14 @@ section {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
 /* Modal for Gallery */
 .modal {
     display: none;
@@ -684,4 +626,11 @@ body {
     .blog-card {
         margin: auto;
     }
+}
+@keyframes loadingSpinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.spinner {
+    animation: loadingSpinner 1s linear infinite;
 }
