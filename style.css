@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Styles */ 
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -633,4 +633,82 @@ body {
 }
 .spinner {
     animation: loadingSpinner 1s linear infinite;
+}
+/* Default Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom untuk layout desktop */
+    gap: 20px;
+}
+
+/* Menjaga Skala di Ponsel Sama Persis */
+@media only screen and (max-width: 768px) {
+    body {
+        transform: scale(1);
+        width: 100vw; /* Hindari pemadatan konten */
+        overflow-x: scroll; /* Tambahkan scroll jika terlalu lebar */
+    }
+    .grid {
+        grid-template-columns: repeat(4, 1fr); /* Tetap 4 kolom */
+    }
+    .navbar {
+        overflow-x: scroll; /* Pastikan navbar bisa discroll */
+    }
+    /* Optional: Sesuaikan ukuran font agar tetap terlihat proporsional */
+    h1, h2, h3, p, a {
+        font-size: 90%;
+    }
+}
+ img {
+    max-width: 100%; /* Tetap scalable */
+    height: auto; /* Proporsional */
+    object-fit: cover; /* Untuk menjaga gambar tidak terdistorsi */
+}
+body {
+    transform-origin: top left; /* Atur titik awal transformasi */
+    transform: scale(1); /* Tidak diubah skalanya */
+}
+/* Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    transform-origin: top left; /* Scale Point */
+    transform: scale(1); /* No scaling change */
+    overflow-x: scroll; /* Enable horizontal scrolling if needed */
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Maintain Desktop Layout */
+    gap: 20px;
+}
+
+/* Image Handling */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Navbar Adjustments */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    overflow-x: auto; /* Allow horizontal scrolling on small screens */
+}
+
+/* Scrollable Content for Small Screens */
+@media only screen and (max-width: 768px) {
+    body {
+        width: 100vw; /* Full screen width */
+        overflow-x: scroll; /* Horizontal scrolling for wide content */
+    }
+
+    .grid {
+        grid-template-columns: repeat(4, 1fr); /* Keep Desktop Grid Layout */
+    }
 }
